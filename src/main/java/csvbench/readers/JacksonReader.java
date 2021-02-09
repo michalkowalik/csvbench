@@ -41,6 +41,7 @@ public class JacksonReader {
 
         try (Reader reader = new FileReader(filePath)) {
             MappingIterator<Point> mi = oReader.readValues(reader);
+
             while(mi.hasNext()) {
                 points.add(mi.next());
             }
